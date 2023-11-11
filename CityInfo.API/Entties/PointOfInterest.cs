@@ -13,6 +13,10 @@ namespace CityInfo.API.Entties
         [StringLength(50)]
         public string Name { get; set; }
 
+        [Required]
+        [StringLength(200)]
+        public string Description { get; set; }
+
         [ForeignKey("CityId")]
         public City? City { get; set; }
         public int CityId { get; set; }
